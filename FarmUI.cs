@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using UnityEngine.UI;
 
 public class FarmUI : MonoBehaviour
 {
@@ -34,78 +35,78 @@ public class FarmUI : MonoBehaviour
 		
 		if(selectedFarm.CurrentFarm == "Tomato")
 		{
-			TomatoButton.interactible = false;
+			TomatoButton.interactable = false;
 		
-			CarrotButton.interactible = true;
-			FlaxButton.interactible = true;
-			GrainButton.interactible = true;
+			CarrotButton.interactable = true;
+			FlaxButton.interactable = true;
+			GrainButton.interactable = true;
 		}
 		if(selectedFarm.CurrentFarm == "Carrot")
 		{
-			CarrotButton.interactible = false;
+			CarrotButton.interactable = false;
 		
-			TomatoButton.interactible = true;
-			FlaxButton.interactible = true;
-			GrainButton.interactible = true;
+			TomatoButton.interactable = true;
+			FlaxButton.interactable = true;
+			GrainButton.interactable = true;
 		}
 		if(selectedFarm.CurrentFarm == "Flax")
 		{
-			FlaxButton.interactible = false;
+			FlaxButton.interactable = false;
 			
-			TomatoButton.interactible = true;
-			CarrotButton.interactible = true;
-			GrainButton.interactible = true;
+			TomatoButton.interactable = true;
+			CarrotButton.interactable = true;
+			GrainButton.interactable = true;
 		}
 		if(selectedFarm.CurrentFarm == "Grain")
 		{
-			GrainButton.interactible = false;
+			GrainButton.interactable = false;
 			
-			TomatoButton.interactible = true;
-			CarrotButton.interactible = true;
-			FlaxButton.interactible = true;
+			TomatoButton.interactable = true;
+			CarrotButton.interactable = true;
+			FlaxButton.interactable = true;
 		}
 	}
 	
 	public void ChoseTomato()
 	{
-		TomatoButton.interactible = false;
+		TomatoButton.interactable = false;
 		
-		CarrotButton.interactible = true;
-		FlaxButton.interactible = true;
-		GrainButton.interactible = true;
+		CarrotButton.interactable = true;
+		FlaxButton.interactable = true;
+		GrainButton.interactable = true;
 		
 		selectedFarm.CurrentFarm = "Tomato";
 	}
 	
 	public void ChoseCarrot()
 	{
-		CarrotButton.interactible = false;
+		CarrotButton.interactable = false;
 		
-		TomatoButton.interactible = true;
-		FlaxButton.interactible = true;
-		GrainButton.interactible = true;
+		TomatoButton.interactable = true;
+		FlaxButton.interactable = true;
+		GrainButton.interactable = true;
 		
 		selectedFarm.CurrentFarm = "Carrot";
 	}
 	
 	public void ChoseFlax()
 	{
-		FlaxButton.interactible = false;
+		FlaxButton.interactable = false;
 		
-		TomatoButton.interactible = true;
-		CarrotButton.interactible = true;
-		GrainButton.interactible = true;
+		TomatoButton.interactable = true;
+		CarrotButton.interactable = true;
+		GrainButton.interactable = true;
 		
 		selectedFarm.CurrentFarm = "Flax";
 	}
 	
 	public void ChoseGrain()
 	{
-		GrainButton.interactible = false;
+		GrainButton.interactable = false;
 		
-		TomatoButton.interactible = true;
-		CarrotButton.interactible = true;
-		FlaxButton.interactible = true;
+		TomatoButton.interactable = true;
+		CarrotButton.interactable = true;
+		FlaxButton.interactable = true;
 		
 		selectedFarm.CurrentFarm = "Grain";
 	}
