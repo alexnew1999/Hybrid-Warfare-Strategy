@@ -199,21 +199,205 @@ public class CharacterSelection : MonoBehaviour
 		if(!isFlashing)
 		{
 			isFlashing = true;
+			float alpha = maxAlpha;
 			characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+			isLowering = true;
 			while (isFlashing)
 			{
-				// Уменьшаем альфа канал
-				for (float alpha = maxAlpha; alpha >= minAlpha; alpha -= alphaStep)
+				//for (float alpha = maxAlpha; alpha >= minAlpha; alpha -= alphaStep)
+				//{
+				//	characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+				//	yield return new WaitForSeconds(0.1f);
+				//}
+				//for (float alpha = minAlpha; alpha <= maxAlpha; alpha += alphaStep)
+				//{
+				//	characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+				//	yield return new WaitForSeconds(0.1f);
+				//}
+				if(alpha == maxAlpha && isFlashing && isLowering)
 				{
 					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
 					yield return new WaitForSeconds(0.1f);
+					alpha = 0.9f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isLowering = false;
+						break;
+					}
 				}
-
-				
-				for (float alpha = minAlpha; alpha <= maxAlpha; alpha += alphaStep)
+				else if(alpha == 0.9f && isFlashing && isLowering)
 				{
 					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
 					yield return new WaitForSeconds(0.1f);
+					alpha = 0.8f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isLowering = false;
+						break;
+					}
+				}
+				else if(alpha == 0.8f && isFlashing && isLowering)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.7f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isLowering = false;
+						break;
+					}
+				}
+				else if(alpha == 0.7f && isFlashing && isLowering)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.6f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isLowering = false;
+						break;
+					}
+				}
+				else if(alpha == 0.6f && isFlashing && isLowering)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.5f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isLowering = false;
+						break;
+					}
+				}
+				else if(alpha == 0.5f && isFlashing && isLowering)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.4f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isLowering = false;
+						break;
+					}
+				}
+				else if(alpha == 0.4f && isFlashing && isLowering)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.3f;
+					isLowering = false;
+					isRaising = true;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.3f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.4f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.4f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.5f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.5f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.6f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.6f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.7f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.7f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.8f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.8f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = 0.9f;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
+				}
+				else if(alpha == 0.9f && isFlashing && isRaising)
+				{
+					characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+					yield return new WaitForSeconds(0.1f);
+					alpha = maxAlpha;
+					isLowering = true;
+					if (!isFlashing)
+					{
+						alpha = maxAlpha;
+						characterSpriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+						isRaising = false;
+						break;
+					}
 				}
 			}
 
