@@ -1106,21 +1106,21 @@ public class SaveLoadManager
 						trade.PlasticCount = tradeSerializable.PlasticCount;
 						trade.PlasticSellPrice = tradeSerializable.PlasticSellPrice;
 						trade.PlasticBuyPrice = tradeSerializable.PlasticBuyPrice;
-						trade.GrainCount = trade.GrainCount;
-						trade.GrainSellPrice = trade.GrainSellPrice;
-						trade.GrainBuyPrice = trade.GrainBuyPrice;
-						trade.CarrotCount = trade.CarrotCount;
-						trade.CarrotSellPrice = trade.CarrotSellPrice;
-						trade.CarrotBuyPrice = trade.CarrotBuyPrice;
-						trade.TomatoCount = trade.TomatoCount;
-						trade.TomatoSellPrice = trade.TomatoSellPrice;
-						trade.TomatoBuyPrice = trade.TomatoBuyPrice;
-						trade.DoveCount = trade.DoveCount;
-						trade.DoveSellPrice = trade.DoveSellPrice;
-						trade.DoveBuyPrice = trade.DoveBuyPrice;
-						trade.BreadCount = trade.BreadCount;
-						trade.BreadSellPrice = trade.BreadSellPrice;
-						trade.BreadBuyPrice = trade.BreadBuyPrice;
+						trade.GrainCount = tradeSerializable.GrainCount;
+						trade.GrainSellPrice = tradeSerializable.GrainSellPrice;
+						trade.GrainBuyPrice = tradeSerializable.GrainBuyPrice;
+						trade.CarrotCount = tradeSerializable.CarrotCount;
+						trade.CarrotSellPrice = tradeSerializable.CarrotSellPrice;
+						trade.CarrotBuyPrice = tradeSerializable.CarrotBuyPrice;
+						trade.TomatoCount = tradeSerializable.TomatoCount;
+						trade.TomatoSellPrice = tradeSerializable.TomatoSellPrice;
+						trade.TomatoBuyPrice = tradeSerializable.TomatoBuyPrice;
+						trade.DoveCount = tradeSerializable.DoveCount;
+						trade.DoveSellPrice = tradeSerializable.DoveSellPrice;
+						trade.DoveBuyPrice = tradeSerializable.DoveBuyPrice;
+						trade.BreadCount = tradeSerializable.BreadCount;
+						trade.BreadSellPrice = tradeSerializable.BreadSellPrice;
+						trade.BreadBuyPrice = tradeSerializable.BreadBuyPrice;
 					}
 					
 					MashineFactorySerializable mashineFactorySerializable = objectData.mashineFactorySerializable;
